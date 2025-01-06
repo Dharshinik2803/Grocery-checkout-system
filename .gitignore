@@ -1,24 +1,50 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+import java.util.*;
+public class Grocery{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        float total=0;
+        float amount=0;
+        System.out.println("Welcome to ABC SuperMarket");
+        System.out.println("");
+        System.out.println("Items available in the super market");
+        System.out.println("1.rice");
+        System.out.println("2.sugar");
+        System.out.println("3.soap");
+        System.out.println("4.shampoo");
+        System.out.println("Enter total number of item you want:");
+        int item=sc.nextInt();
+        for(int i=1;i<=item;i++){
+            System.out.println("Enter the num corresponding to the item");
+            int n=sc.nextInt();
+            if(n==1){
+                System.out.println("Enter the kg");
+                int quantity=sc.nextInt();
+                int rice=30;
+                amount=rice*quantity;
+            }
+            else if(n==2){
+                System.out.println("Enter the kg");
+                int quantity=sc.nextInt();
+                int sugar=25;
+                amount=sugar*quantity;
+            }
+            else if(n==3){
+                System.out.println("Enter the number of soap");
+                int quantity=sc.nextInt();
+                int soap=12;
+                amount=soap*quantity;
+            }
+            else if(n==4){
+                System.out.println("Enter the liter");
+                int quantity=sc.nextInt();
+                int shampoo=40;
+                amount=shampoo*quantity;
+            }
+            else{
+                System.out.println("Enter valid number");
+            }
+          total+=amount;
+          System.out.println("Total amount need to pay :"+total);
+        }
+    }
+}
